@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فريق قحطان سوفت برو | الاحترافية العالمية</title>
+    <meta name="description" content="الموقع الرسمي لفريق قحطان سوفت برو - حلول برمجية متكاملة">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --secondary-bg: #1e293b;
+            --accent-color: #fbbf24; /* الذهبي الملكي */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass: rgba(30, 41, 59, 0.7);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* شريط التنقل الزجاجي */
+        .navbar {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: var(--text-main) !important;
+            font-weight: 500;
+            transition: 0.3s;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+            transform: translateY(-2px);
+        }
+
+        /* القسم الرئيسي Hero */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* البطاقات الاحترافية */
+        .custom-card {
+            background: var(--secondary-bg);
+            border: 1px solid rgba(251, 191, 36, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        /* قسم المهارات Progress Bars */
+        .skill-tag {
+            background: rgba(251, 191, 36, 0.1);
+            color: var(--accent-color);
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        /* أزرار التحميل والمعاينة */
+        .btn-gold {
+            background: var(--accent-color);
+            color: #000;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: 10px 25px;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-gold:hover {
+            background: #fff;
+            box-shadow: 0 0 20px var(--accent-color);
+        }
+
+        .btn-outline-gold {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 12px;
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+
+        /* قسم التواصل */
+        .contact-input {
+            background: var(--secondary-bg);
+            border: 1px solid #334155;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .contact-input:focus {
+            background: var(--secondary-bg);
+            border-color: var(--accent-color);
+            color: #fff;
+            box-shadow: none;
+        }
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid #334155;
+            text-align: center;
+        }
+
+        /* تحسينات الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#">
+                <span style="color: var(--accent-color);">QAHTAN</span> SOFT PRO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">عن الفريق</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">المهارات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apps">تطبيقاتي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">تواصل معي</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container" data-aos="zoom-in">
+            <img src="https://ui-avatars.com/api/?name=Omar+Qahtan&background=fbbf24&color=000&size=150" class="rounded-circle mb-4 border border-4 border-warning" alt="Omar Qahtan">
+            <h1 class="hero-title">المهندس عمر قحطان</h1>
+            <h3 class="mb-4"><span id="typed"></span></h3>
+            <div class="mt-5">
+                <a href="#portfolio" class="btn btn-gold btn-lg me-3">عرض الأعمال</a>
+                <a href="#contact" class="btn btn-outline-gold btn-lg">تواصل مباشر</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-left">
+                    <h2 class="fw-bold mb-4" style="color: var(--accent-color);">من نحن؟</h2>
+                    <p class="lead text-muted">فريق قحطان سوفت برو يمثل القمة في حلول برمجة الهواتف الذكية وتطوير الأدوات التقنية. نحن لا نقدم خدمات فقط، بل نصنع معايير جديدة في الكفاءة والابتكار الرقمي لأكثر من عقد من الزمن.</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="custom-card text-center">
+                        <i class="fas fa-code-branch fa-5x mb-3 text-warning"></i>
+                        <h4>رؤية عالمية.. تنفيذ محلي</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-up">الخبرات والمهارات التقنية</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-3" data-aos="flip-left">
+                    <div class="custom-card">
+                        <i class="fab fa-html5 fa-3x mb-3 text-danger"></i>
+                        <h5>HTML5 / CSS3</h5>
+                        <div class="skill-tag">خبير</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="100">
+                    <div class="custom-card">
+                        <i class="fab fa-js fa-3x mb-3 text-warning"></i>
+                        <h5>JavaScript</h5>
+                        <div class="skill-tag">متقدم</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="custom-card">
+                        <i class="fab fa-java fa-3x mb-3 text-primary"></i>
+                        <h5>Java / Android</h5>
+                        <div class="skill-tag">محترف</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="300">
+                    <div class="custom-card">
+                        <i class="fas fa-database fa-3x mb-3 text-info"></i>
+                        <h5>SQL / Database</h5>
+                        <div class="skill-tag">متخصص</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container py-5">
+            <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item"><button class="nav-link active btn-outline-gold" data-bs-toggle="pill" data-bs-target="#tab-videos">فيديوهات</button></li>
+                <li class="nav-item"><button class="nav-link btn-outline-gold" data-bs-toggle="pill" data-bs-target="#tab-photos">صور</button></li>
+                <li class="nav-item"><button class="nav-link btn-outline-gold" data-bs-toggle="pill" data-bs-target="#tab-music">موسيقى</button></li>
+            </ul>
+            
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab-videos">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="custom-card">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500" class="img-fluid rounded mb-3" alt="">
+                                <h5>شرح تفعيل الأدوات</h5>
+                                <button class="btn btn-gold btn-sm w-100" onclick="alert('فتح مشغل الفيديو...')">مشاهدة الآن</button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="tab-pane fade" id="tab-photos">
+                    <div class="row g-4">
+                        <div class="col-md-3"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" class="img-fluid rounded" alt=""></div>
+                        <div class="col-md-3"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400" class="img-fluid rounded" alt=""></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-music">
+                    <div class="custom-card text-center p-5">
+                        <i class="fas fa-music fa-3x mb-3 text-warning"></i>
+                        <p>قائمة الملفات الصوتية التعليمية</p>
+                        <audio controls class="w-100"><source src="#" type="audio/mpeg"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apps" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: var(--accent-color);">تطبيقاتي وبرامجي الحصرية</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="custom-card d-flex align-items-center">
+                        <i class="fas fa-mobile-alt fa-3x me-4 text-warning"></i>
+                        <div>
+                            <h4>أداة Qahtan Tool v1.0</h4>
+                            <p class="text-muted">الأداة الأسرع لتخطي الحسابات بضغطة زر.</p>
+                            <a href="#" class="btn btn-sm btn-gold">تحميل مباشر <i class="fas fa-download ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-5" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">تواصل معي</h2>
+                    <p class="text-muted mb-4">هل لديك مشروع ضخم أو استفسار تقني؟ لا تتردد في مراسلتي عبر أي من المنصات التالية:</p>
+                    <div class="d-flex gap-3 mb-5">
+                        <a href="https://wa.me/967737631620" class="btn btn-outline-gold"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/QST_O" class="btn btn-outline-gold"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.facebook.com/QSTPROULTAR" class="btn btn-outline-gold"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:info@qahtan.com" class="btn btn-outline-gold"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
+                    <form class="custom-card shadow-lg">
+                        <div class="row g-3">
+                            <div class="col-md-6"><input type="text" class="form-control contact-input" placeholder="الاسم الكامل"></div>
+                            <div class="col-md-6"><input type="email" class="form-control contact-input" placeholder="البريد الإلكتروني"></div>
+                            <div class="col-12"><textarea class="form-control contact-input" rows="5" placeholder="تفاصيل رسالتك..."></textarea></div>
+                            <div class="col-12"><button type="submit" class="btn btn-gold w-100 py-3">إرسال الرسالة الآن</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h5 class="fw-bold mb-3"><span style="color: var(--accent-color);">QAHTAN</span> SOFT PRO</h5>
+            <p class="text-muted">صُمم بكل احترافية ليكون واجهتك نحو النجاح الرقمي.</p>
+            <div class="mt-4 text-muted small">© 2026 جميع الحقوق محفوظة لفريق قحطان سوفت برو</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        // تهيئة حركات الظهور عند التمرير
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+
+        // تأثير الكتابة في الهيرو
+        var typed = new Typed('#typed', {
+            strings: [
+                'نحن رواد حلول السوفت وير',
+                'نبتكر لنغير موازين البرمجة',
+                'خبرة عالمية بين يديك',
+                'فريق قحطان سوفت برو.. الريادة'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // تأثير تغيير شفافية النافبار عند التمرير
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.background = '#0f172a';
+            } else {
+                document.querySelector('.navbar').style.background = 'rgba(30, 41, 59, 0.7)';
+            }
+        });
+    </script>
+</body>
+</html>
